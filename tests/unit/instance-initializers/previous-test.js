@@ -29,9 +29,6 @@ test('it works', function(assert) {
   appMock
     .expects('inject')
     .withArgs('route', 'previous', 'previous:main');
-  appMock
-    .expects('inject')
-    .withArgs('router:main', 'previous', 'previous:main');
   initialize(this.appInstance);
 
   assert.ok(true);

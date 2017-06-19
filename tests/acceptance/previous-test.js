@@ -23,9 +23,9 @@ test('tracking previous', function(assert) {
   });
 
   andThen(function() {
-    assert.equal(find('#path').text().trim(), 'path: foo');
+    assert.equal(find('#path').text().trim(), 'path: foo.index');
     assert.equal(find('#url').text().trim(), 'url: /foo');
-    assert.equal(find('#route').text().trim(), 'route: foo');
+    assert.equal(find('#route').text().trim(), 'route: foo.index');
     
     click('.to-home');
   });
