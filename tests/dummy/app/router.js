@@ -8,7 +8,9 @@ const Router = Ember.Router.extend(PreviousMixin, {
 });
 
 Router.map(function() {
-  this.route('foo');
+  this.route('foo', function() {
+    this.route('baz', {path: ':slug'});
+  });
   this.route('bar');
 });
 

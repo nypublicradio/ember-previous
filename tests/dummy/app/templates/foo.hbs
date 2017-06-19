@@ -8,4 +8,7 @@
   route: {{model.route}}
 </p>
 
+{{outlet}}
+
 {{link-to 'Bar' 'bar' (query-params baz='biz') class='query-params'}}
+{{link-to 'Foo/Baz' 'foo.baz' 'boo' class='foo-baz'}}
