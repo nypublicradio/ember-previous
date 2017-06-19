@@ -1,6 +1,6 @@
 {
   "name": "ember-previous",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ember addon to expose previous router states",
   "keywords": [
     "ember-addon"
