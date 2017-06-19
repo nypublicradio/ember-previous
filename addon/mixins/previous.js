@@ -2,13 +2,12 @@ import Ember from 'ember';
 
 export default Ember.Mixin.create({
   willTransition() {
-    this.setProperties({
-      'previous.path': this.currentPath,
-      'previous.url': this.currentURL,
-      'previous.route': this.currentRouteName
+    this._super(...arguments);
+    let previous = Ember.getOwner(this).lookup('previous:main');
+    Ember.setProperties(previous, {
+      'path': this.currentPath,
+      'url': this.currentURL,
+      'route': this.currentRouteName
     });
-  
-    let ret = this._super(...arguments);
-    return ret === false ? ret : true;
   }
 });
