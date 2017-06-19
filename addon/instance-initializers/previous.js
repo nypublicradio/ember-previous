@@ -6,7 +6,6 @@ export function initialize(appInstance) {
   };
   appInstance.register('previous:main', previous, {instantiate: false})
   appInstance.inject('route', 'previous', 'previous:main');
-  appInstance.inject('router:main', 'previous', 'previous:main');
 }
 
 export default {
