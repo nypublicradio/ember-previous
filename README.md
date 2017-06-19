@@ -1,6 +1,37 @@
 # ember-previous
 
-This README outlines the details of collaborating on this Ember addon.
+An addon for exposing some useful states of the ember router.
+
+Add the `PreviousMixin` to your app router:
+
+```javascript
+...
+import PreviousMixin from 'ember-previous/mixins/previous';
+
+const Router = Ember.Router.extend(PreviousMixin, {
+  ...
+});
+
+```
+
+You'll have access to a `previous` object on all your routes.
+
+```javascript
+// routes/foo.js
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  setupController(controller) {
+    this._super(...arguments);
+    let {
+      path, // foo.bar
+      url, // foo/bar
+      route // foo.bar
+    } = this.get('previous');
+    controller.setProperties({ path, url, route });
+  }
+});
+```
 
 ## Installation
 
