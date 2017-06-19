@@ -1,7 +1,7 @@
 {
   "name": "ember-previous",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "ember addon to expose previous router states",
   "keywords": [
     "ember-addon"
   ],
@@ -11,7 +11,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/nypublicradio/ember-previous",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
